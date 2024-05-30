@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faBriefcase, faCircleExclamation, faClock, faIdCardClip, faLocationDot, faSearch } from '@fortawesome/free-solid-svg-icons';
 import { CommonModule } from '@angular/common';
@@ -7,15 +7,15 @@ import { Job, jobData } from './job.model';
 import { Router } from '@angular/router';
 import { JobDetailsComponent } from "../job-details/job-details.component";
 
-
 @Component({
     selector: 'app-job-listing',
-    standalone: true, // Ensure HttpClientModule is imported here
+    standalone: true, 
     templateUrl: './job-listing.component.html',
-    styleUrls: ['./job-listing.component.scss'] // Corrected typo from styleUrl to styleUrls
+    styleUrls: ['./job-listing.component.scss'] 
     ,
     imports: [FontAwesomeModule, CommonModule, HttpClientModule, JobDetailsComponent]
 })
+
 export class JobListingComponent  {
   faSearch = faSearch;
   faLocation = faLocationDot;
@@ -28,10 +28,8 @@ export class JobListingComponent  {
 
   constructor(private router: Router) {}
 
-
-
   viewJobDetails(jobId: number) {
-    this.router.navigate(['/job', jobId]); // Redireciona para a página de detalhes com o ID da vaga
+    this.router.navigate(['/job', jobId]); 
   }
 
   

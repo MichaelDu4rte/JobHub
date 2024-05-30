@@ -14,18 +14,18 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class JobDetailsComponent {
   faClose = faX
 
-job!: Job; // Declare a propriedade job do tipo Job
+  job!: Job; 
 
-constructor(private route: ActivatedRoute, private router: Router) {}
+  constructor(private route: ActivatedRoute, private router: Router) {}
 
-ngOnInit(): void {
-  this.route.params.subscribe(params => {
-    const jobId = +params['id'];
-    this.job = jobData[jobId]; 
-  });
-}
+  ngOnInit(): void {
+    this.route.params.subscribe(params => {
+      const jobId = +params['id'];
+      this.job = jobData[jobId]; 
+    });
+  }
 
-goBackToHome(): void {
-  this.router.navigate(['/']); 
-}
+  goBackToHome(): void {
+    this.router.navigate(['/']); 
+  }
 }
