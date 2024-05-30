@@ -1,0 +1,97 @@
+.card-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 0;
+    gap: 1rem;
+    overflow-y: auto;
+
+    .card {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        align-items: flex-start;
+        padding: 3%;
+        margin: 0 1%;
+        background-color: #fff;
+        line-height: 1.5;
+        gap: 1.5rem;
+        box-shadow: 5px 1px 5px rgba(0, 0, 0, 0.16);
+        border-radius: 10px;
+        cursor: pointer;
+
+        .card-left {
+            width: 10%;
+            min-width: 50px;
+            height: 90px;
+            display: flex;
+            justify-content: center;
+            border-radius: 20%;
+            background-color: rgb(103, 164, 230);
+
+            img {
+                width: 100%;
+                height: auto;
+                min-height: 60px;
+                padding: 1rem;
+            }
+        }
+
+        .card-center {
+            width: 50%;
+
+            fa-icon {
+                margin-right: 15px;
+            }
+
+            .card-loc, .card-sub {
+                color: #666;
+                margin-top: 10px;
+            }
+
+            .card-sub {
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                gap: 10px;
+
+                p {
+                    display: flex;
+                    padding: 0 .5rem 0 0;
+                    align-items: center;
+                }
+            }
+        }
+
+        .card-right {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 15%;
+
+            .card-tag a {
+                font-size: 13px;
+            }
+
+            .card-salary {
+                padding: 0.5rem 0;
+                color: blue;
+
+                span {
+                    color: #333;
+                    font-size: 13px;
+                }
+            }
+        }
+
+       
+    }
+}
+
+@media (max-width: 480px) {
+    .card-wrapper .card .card-center .card-loc, .card-sub, .card-tag {
+        display: none;
+    }
+}
+
+

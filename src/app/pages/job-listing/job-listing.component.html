@@ -1,0 +1,40 @@
+<div class="card-wrapper">
+  <div
+    class="card"
+    *ngFor="let job of jobs; let i = index"
+    (click)="viewJobDetails(i)"
+  >
+    <div class="card-left">
+      <img [src]="job.image" alt="" />
+      <!-- Usando a propriedade image -->
+    </div>
+
+    <div class="card-center">
+      <h3>{{ job.company }}</h3>
+      <div class="card-detail">{{ job.position }}</div>
+      <p class="card-loc">
+        <fa-icon [icon]="faLocation"></fa-icon>{{ job.location }}
+      </p>
+      <div class="card-sub">
+        <p><fa-icon [icon]="faClock"></fa-icon>{{ job.postedTime }}</p>
+        <p><fa-icon [icon]="faBriefcase"></fa-icon>{{ job.employmentType }}</p>
+        <p>
+          <fa-icon [icon]="faPeople"></fa-icon
+          >{{ job.applications }} Applications
+        </p>
+      </div>
+    </div>
+
+    <div class="card-right">
+      <div class="card-tag">
+        <h5>Division</h5>
+        <a href="#">{{ job.division }}</a>
+      </div>
+      <div class="card-salary">
+        <p>
+          <b>{{ job.salary }}</b> <span>/ year</span>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

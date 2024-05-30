@@ -1,0 +1,175 @@
+
+.container {
+    position: fixed;
+    width: 15%;
+    left: 0;
+    min-height: 100vh;
+
+    .sidebar {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100vh;
+        background-color: #fff;
+        padding: 24px;
+        border-radius: 0px 30px ;
+        gap: 20px;
+        transition: all .3s;
+
+        &.active {
+            width: 92px;
+            transition: all .3s;
+
+            .menu-btn fa-icon {
+                transform: rotate(180deg);
+                transition: all .3s;
+
+            }
+
+            .menu {
+                transition: all .3s;
+
+
+                ul li .arrow{
+                    display: none;
+                    
+                }
+
+                .title {
+                    text-align: center;
+                    font-size: 12px;
+                }   
+
+                a .text {
+                    display: none;
+                }
+
+                ul li {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-direction: column;
+                }
+
+                .sub-menu {
+                    text-align: center;
+                    border-bottom: 2px solid #333;
+                    border-left: 0;
+                    padding: 0;
+                    margin-left: 5px;
+                }
+               
+            }
+
+           
+        }
+
+        .nav {
+            flex: 1;
+
+        }
+
+        .menu {
+            gap: 10px;
+
+            &:not(:last-child) {
+                padding-bottom: 20px;
+                margin-bottom: 20px;
+                border-bottom: 2px solid #d0d0d0;
+            }
+
+
+            .title {
+                font-size: 14px;
+                font-weight: 500;
+                color: #757575;
+                text-transform: uppercase;
+                margin-bottom: 20px;
+            }
+
+            .sub-menu {
+                margin-left: 20px;
+                padding-left: 20px;
+                padding-top: 5px;
+                border-left: 1px solid #333;
+             
+
+                li a {
+                    font-size: 12px;
+                    padding: 10px 8px;
+                    transition: .3s all;
+                }
+            }
+
+            ul li {
+                list-style: none;
+                margin-bottom: 5px;
+
+                a {
+                    text-decoration: none;
+                    display: flex;
+                    align-items: center;
+                    position: relative;
+                    gap: 10px;
+                    font-size: 14px;
+                    font-weight: 500;
+                    color: #757575;
+                    padding: 12px 8px;
+                    border-radius: 8px;
+                    transition: .3s all;
+                    cursor: pointer;
+
+                    &:hover, &.active {
+                        color: #000;
+                        background-color: #f6f6f6;
+                    }
+
+                    fa-icon {
+                        font-size: 17px;
+                    }
+
+                    .arrow {
+                        font-size: 14px;
+                        position: absolute;
+                        top: 15px;
+                        right: 10px;
+                        transition: all 0.3;
+                    }
+                }
+
+              
+
+
+            }
+        }
+    }
+}
+
+
+.menu-btn {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    right: -14px;
+    top: 3.5%;
+    width: 28px;
+    height: 28px;
+    cursor: pointer;
+    border-radius: 8px;
+    background-color: #fff;
+    color: #757575;
+    border: 2px solid #f6f6f6;
+
+    i {
+        transition: all 0.3s;
+    }
+}
+
+
+@media (max-width: 700px) {
+    .container {
+        display: none;
+    }
+}

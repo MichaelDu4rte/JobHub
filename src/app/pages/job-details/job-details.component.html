@@ -1,0 +1,32 @@
+<div class="detail active">
+  <fa-icon
+    [icon]="faClose"
+    class="close-detail"
+    (click)="goBackToHome()"
+  ></fa-icon>
+  <div class="detail-header">
+    <img [src]="job.image" alt="{{ job.company }}" />
+
+    <h2>{{ job.company }}</h2>
+    <p>{{ job.position }}</p>
+    <hr class="divider" />
+    <div class="detail-desc">
+      <div class="about">
+        <h4>About Company</h4>
+        <p>{{ job.aboutCompany }}</p>
+      </div>
+      <hr class="divider" />
+      <div class="qualify">
+        <h4>Qualifications</h4>
+        <ul>
+          <li>{{ job.qualifications }}</li>
+        </ul>
+      </div>
+    </div>
+    <hr class="divider" />
+    <div class="detail-btn">
+      <button class="btn-apply">Apply</button>
+      <button class="btn-save">Save Job</button>
+    </div>
+  </div>
+</div>

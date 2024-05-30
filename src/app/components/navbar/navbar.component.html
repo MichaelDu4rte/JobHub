@@ -1,0 +1,68 @@
+<div class="container">
+  <div class="sidebar" [class.active]="isSidebarActive">
+    <div class="menu-btn" (click)="toggleShowSidebar()">
+      <fa-icon [icon]="faArrowLeft"></fa-icon>
+    </div>
+
+    <div class="nav">
+      <div class="menu">
+        <p class="title">Main</p>
+
+        <ul>
+          <li>
+            <a href="#" class="active"
+              ><fa-icon [icon]="faHome"></fa-icon
+              ><span class="text">Home</span></a
+            >
+          </li>
+          <li>
+            <a href="#" class=""
+              ><fa-icon [icon]="faBookmarks"></fa-icon
+              ><span class="text">Bookmarks</span></a
+            >
+          </li>
+        </ul>
+      </div>
+
+      <div class="menu">
+        <p class="title">Settings</p>
+
+        <ul>
+          <li>
+            <a class="" (click)="toggleSubMenu()">
+              <fa-icon [icon]="faSetting"></fa-icon>
+              <span class="text">Setting</span>
+              <fa-icon [icon]="faArrowDown" class="arrow"></fa-icon>
+            </a>
+            <ul class="sub-menu" *ngIf="showSubMenu">
+              <li class="">
+                <a>
+                  <span>Dark Mode</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="menu">
+      <p class="title">Account</p>
+
+      <ul>
+        <li>
+          <a>
+            <fa-icon [icon]="faLogin"></fa-icon>
+            <span class="text">Login</span>
+          </a>
+        </li>
+        <li>
+          <a>
+            <fa-icon [icon]="faLogout"></fa-icon>
+            <span class="text">Logout</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
